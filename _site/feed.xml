@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-19T19:30:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zuno</title><author><name>Zuno</name></author><entry><title type="html">[백준] 꿀 따기 21758 JS</title><link href="http://localhost:4000/2024/07/19/boj-21758.html" rel="alternate" type="text/html" title="[백준] 꿀 따기 21758 JS" /><published>2024-07-19T16:45:13+09:00</published><updated>2024-07-19T16:45:13+09:00</updated><id>http://localhost:4000/2024/07/19/boj-21758</id><content type="html" xml:base="http://localhost:4000/2024/07/19/boj-21758.html"><![CDATA[<h1 id="-백준--꿀-따기-21758-js">[ 백준 ] 꿀 따기 21758 (js)</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-07-19T20:48:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Zuno</title><author><name>Zuno</name></author><entry><title type="html">[백준] 꿀 따기 21758 JS</title><link href="http://localhost:4000/2024/07/19/boj-21758.html" rel="alternate" type="text/html" title="[백준] 꿀 따기 21758 JS" /><published>2024-07-19T16:45:13+09:00</published><updated>2024-07-19T16:45:13+09:00</updated><id>http://localhost:4000/2024/07/19/boj-21758</id><content type="html" xml:base="http://localhost:4000/2024/07/19/boj-21758.html"><![CDATA[<h1 id="-백준--꿀-따기-21758-js">[ 백준 ] 꿀 따기 21758 (js)</h1>
 
 <p><a href="https://www.acmicpc.net/problem/21758"></a></p>
 
@@ -33,11 +33,11 @@
   <li>시간 초과를 해결하기 위해 그 순간순간 모든 값을 더하는것이 아닌 누적 합을 활용한다.</li>
 </ul>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// [i ~ j] 까지의 꿀의 합</span>
-<span class="c1">// 단순하게 더하면 j - i O(N)이 걸리지만</span>
-<span class="c1">// 아래와 같이 누적합을 활용하면 O(1)에 해결할 수 있다.</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// [i ~ j] 까지의 꿀의 합
+// 단순하게 더하면 j - i O(N)이 걸리지만
+// 아래와 같이 누적합을 활용하면 O(1)에 해결할 수 있다.
 
-<span class="nx">Sum</span><span class="p">[</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">Sum</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">j</span><span class="p">]</span> <span class="o">-</span> <span class="nx">Sum</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> 
+Sum[i, j] = Sum[0, j] - Sum[0, i - 1] 
 </code></pre></div></div>
 
 <ul>
@@ -48,7 +48,7 @@
 
 <hr />
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
 
 <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nf">toString</span><span class="p">().</span><span class="nf">trim</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">)</span>
 <span class="kd">const</span> <span class="nx">N</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nf">shift</span><span class="p">()</span>
@@ -101,7 +101,7 @@
 
 </aside>
 
-<p>음.. 잘 이해가 안간다 경험상으로는 Promise객체 뒤에 .then()과.catch()를 이용해서 비동기 함수의 결과값을 받아와서 원하는대로 조작할 수 있다는 것만 경험상으로 기억한다.</p>
+<p>음.. 잘 이해가 안간다 경험상으로는 Promise객체 뒤에 .then()과.catch()를 이용해서 비동기 함수의 결과값을 받아와서 원하는대로 조작할 수 있다는 것만 경험상으로 기억한다.asdfasfdafsd</p>
 
 <p>일단은 Promise 가 나오게 된 이유를 먼저 공부해보자</p>
 
@@ -138,7 +138,7 @@
 
 <ol>
   <li>콜백 지옥</li>
-  <li>에러 처리의 한계</li>
+  <li>에러 처리의 한계a</li>
 </ol>
 
 <p>먼저 콜백 지옥에 대해서 간략하게 알아보자. 왜 콜백지옥이 형성될까?</p>

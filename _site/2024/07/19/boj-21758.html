@@ -25,7 +25,7 @@
 
 </head>
 
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.css" rel="stylesheet">
 <body>
 
   <!-- Navigation -->
@@ -58,6 +58,7 @@
 
   <!-- Page Header -->
 
+<div class="markdown-body">
 <header class="masthead" style="background-image: url('/img/posts/03.jpg')">
   
     <div class="overlay"></div>
@@ -121,11 +122,11 @@
   <li>시간 초과를 해결하기 위해 그 순간순간 모든 값을 더하는것이 아닌 누적 합을 활용한다.</li>
 </ul>
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// [i ~ j] 까지의 꿀의 합</span>
-<span class="c1">// 단순하게 더하면 j - i O(N)이 걸리지만</span>
-<span class="c1">// 아래와 같이 누적합을 활용하면 O(1)에 해결할 수 있다.</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// [i ~ j] 까지의 꿀의 합
+// 단순하게 더하면 j - i O(N)이 걸리지만
+// 아래와 같이 누적합을 활용하면 O(1)에 해결할 수 있다.
 
-<span class="nx">Sum</span><span class="p">[</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="nx">Sum</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">j</span><span class="p">]</span> <span class="o">-</span> <span class="nx">Sum</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nx">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> 
+Sum[i, j] = Sum[0, j] - Sum[0, i - 1] 
 </code></pre></div></div>
 
 <ul>
@@ -136,7 +137,7 @@
 
 <hr />
 
-<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">)</span>
 
 <span class="kd">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nf">readFileSync</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nf">toString</span><span class="p">().</span><span class="nf">trim</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">)</span>
 <span class="kd">const</span> <span class="nx">N</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nf">shift</span><span class="p">()</span>
@@ -193,6 +194,7 @@
       </div>
     </div>
   </div>
+</div>
 
 
   <!-- Footer -->

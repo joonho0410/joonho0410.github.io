@@ -4,6 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
+<div class="markdown-body">
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
@@ -52,3 +53,4 @@ layout: default
       </div>
     </div>
   </div>
+</div>
